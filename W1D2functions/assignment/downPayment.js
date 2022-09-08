@@ -16,6 +16,7 @@
 // input: cost
 // output: down Payment
 // process: calculate downpayment using cost and percentage on cost
+const assert = require("assert");
 
 function calculateDownpayment(cost) {
   let downPayment = 0;
@@ -34,3 +35,5 @@ console.log("expect 2000: ", calculateDownpayment(40000));
 console.log("expect 2500: ", calculateDownpayment(50000));
 console.log("expect 7500: ", calculateDownpayment(100000));
 console.log("expect 25000: ", calculateDownpayment(250000));
+
+exports.calculateDownpayment = calculateDownpayment;

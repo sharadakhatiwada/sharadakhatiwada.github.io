@@ -16,6 +16,7 @@
 // process: converting years into month,
 // so we can add every month interest
 // to the principle and get total balance
+"use strict";
 
 function compoundInterest(principle, rate, years) {
   let time = years * 12;
@@ -25,7 +26,9 @@ function compoundInterest(principle, rate, years) {
     totalBalance = totalBalance + interest;
   }
 
-  return Number(totalBalance).toFixed(2);
+  return Number(totalBalance.toFixed(2));
 }
 console.log("expect 110.47", compoundInterest(100, 10, 1));
 console.log("expect 16470.09", compoundInterest(10000, 5, 10));
+
+exports.compoundInterest = compoundInterest;

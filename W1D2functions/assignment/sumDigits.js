@@ -29,3 +29,6 @@ function multDigits(input) {
 console.log("Sum of 1234 is ", sumDigits(1234), multDigits(1234));
 console.log("Sum of 102 is ", sumDigits(102), multDigits(102));
 console.log("Sum of 8 is ", sumDigits(8), multDigits(8));
+
+exports.sumDigits = sumDigits;
+exports.multDigits = multDigits;
