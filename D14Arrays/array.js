@@ -13,13 +13,10 @@ module.exports = {maxOfThree: maxOfThree, sum: sum, multiply: multiply }; //add 
  */
 function maxOfThree(a, b, c) {
   let maxNum = a;
-  if (a < b) {
+  if (maxNum < b) {
     maxNum = b;
   }
-  if (b < c) {
-    maxNum = c;
-  }
-  if (a < c) {
+  if (maxNum < c) {
     maxNum = c;
   }
   return Number(maxNum);
@@ -55,3 +52,19 @@ function multiply(arr) {
   return tot;
 }
 exports.multiply = multiply;
+/**
+ *
+ * @param {string value} words
+ * @returns length og longest word
+ */
+function findLongestWord(words) {
+  let LongestWord = "";
+  for (let word of words) {
+    if (LongestWord.length < word.length) {
+      LongestWord = word;
+    }
+  }
+  return LongestWord.length;
+}
+
+exports.findLongestWord = findLongestWord;
