@@ -17,6 +17,13 @@
 // so we can add every month interest
 // to the principle and get total balance
 "use strict";
+/**
+ *
+ * @param {initial amount} principle
+ * @param {interest percentage} rate
+ * @param {numbers of years} years
+ * @returns total balance at end
+ */
 
 function compoundInterest(principle, rate, years) {
   let time = years * 12;

@@ -17,6 +17,11 @@
 // output: down Payment
 // process: calculate downpayment using cost and percentage on cost
 const assert = require("assert");
+/**
+ *
+ * @param {cost of house/property} cost
+ * @returns down payment
+ */
 
 function calculateDownpayment(cost) {
   let downPayment = 0;

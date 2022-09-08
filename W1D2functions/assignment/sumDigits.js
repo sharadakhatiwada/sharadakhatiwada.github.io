@@ -5,6 +5,11 @@
 // 102 3 0
 // 8 8 8
 
+/**
+ *
+ * @param {any number} input
+ * @returns sum of every digit of input
+ */
 function sumDigits(input) {
   let sum = 0;
   while (input >= 10) {
@@ -16,6 +21,11 @@ function sumDigits(input) {
   return sum;
 }
 
+/**
+ *
+ * @param {any number} input
+ * @returns Multiplication of every digit of input
+ */
 function multDigits(input) {
   let multiply = 1;
   while (input >= 10) {

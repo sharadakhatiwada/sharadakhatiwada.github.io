@@ -4,6 +4,12 @@
 // console.log("expect -17.7778: ", convertFahrenheit (0));
 // console.log("expect 100: ", convertFahrenheit (212));
 
+/**
+ *
+ * @param {input as a temperature in fahrenheit} tempInFahrenheit
+ * @returns temperature in celcius
+ */
+
 function convertFahrenheit(tempInFahrenheit) {
   let Celsius = ((tempInFahrenheit - 32) * 5) / 9;
   return Number(Celsius.toFixed(4));

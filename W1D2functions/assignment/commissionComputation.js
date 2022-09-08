@@ -20,8 +20,16 @@
 // console.log("expect 6: ", computeSalesCommission(false, 300));
 // console.log("expect 65: ", computeSalesCommission(true, 3500));
 // console.log("expect 100: ", computeSalesCommission(false, 3500));
+
 const assert = require("assert");
 const prompt = require("prompt-sync")();
+
+/**
+ *
+ * @param {if salaried true } Boolean
+ * @param {sales amount} sales
+ * @returns commission amount
+ */
 
 function computeSalesCommission(Boolean, sales) {
   let commission = 0;
