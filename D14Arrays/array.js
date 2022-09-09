@@ -94,6 +94,8 @@ function reverseArrayInPlace(array) {
     let input = array[i];
     array[i] = array[j];
     array[j] = input;
+    i++;
+    j--;
   }
   return array;
 }
@@ -118,13 +120,18 @@ exports.scoreExams = scoreExams;
 
 function generateArray(numberOfSubArray, sizeOfSubArray) {
   const finalSubArray = [];
+  let items = 1;
   for (let i = 0; i < numberOfSubArray; i++) {
     let subArray = [];
-    for (let j = 1; j <= sizeOfSubArray; j++) {
-      subArray.push(j);
+
+    for (let j = 0; j < sizeOfSubArray; j++) {
+      subArray.push(items);
+      items++;
     }
+
     finalSubArray.push(subArray);
   }
   return finalSubArray;
 }
+console.log("Hi ", generateArray(3, 3));
 exports.generateArray = generateArray;
