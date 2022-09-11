@@ -1,16 +1,16 @@
 "use strict";
 
-const {
-  maxOfThree,
-  sum,
-  multiply,
-  findLongestWord,
-  reverseArray,
-  reverseArrayInPlace,
-  scoreExams,
-  generateArray,
-} = require("./array");
-const assert = require("assert");
+// const {
+//   maxOfThree,
+//   sum,
+//   multiply,
+//   findLongestWord,
+//   reverseArray,
+//   reverseArrayInPlace,
+//   scoreExams,
+//   generateArray,
+// } = require("./array");
+// const assert = require("assert");
 
 /* You need the assert and function name declarations to test in node.  
 Comment these out when you send it to the browser with the index.html mocha setup page.
