@@ -1,3 +1,4 @@
+"use strict";
 const student1 = {
   studentId: "s101",
   quizAnswer: [1, 1, 2, 4],
@@ -17,7 +18,7 @@ const quiz = [student1, student2, student3];
  *
  * @param {array} quiz array of students  objects
  * @param {array} correctAnswer list of correct answer
- * @returns  score of student
+ * @returns{array} score of student
  */
 function gradeQuiz(quiz, correctAnswer) {
   let finalArray = [];
@@ -34,3 +35,30 @@ function gradeQuiz(quiz, correctAnswer) {
   return finalArray;
 }
 console.log(gradeQuiz(quiz, [3, 1, 2, 4]));
+
+("use strict");
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+// let sum = 0;
+// for (let key in salaries) {
+//   sum = sum + salaries[key];
+// }
+// console.log(sum);
+// before the call
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu",
+};
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == "number") {
+      obj[key] *= 2;
+    }
+  }
+  return obj;
+}
+console.log(multiplyNumeric(menu));

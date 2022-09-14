@@ -40,6 +40,15 @@
 //   }
 // }
 
-let a = { x: 1 };
-let b = { x: 1 }; // two independent objects
-console.log(a == b); // false
+// let a = { x: 1 };
+// let b = { x: 1 }; // two independent objects
+// console.log(a == b); // false
+function getProperties(obj) {
+  const arrayOfObj = [];
+  for (let property in obj) {
+    arrayOfObj.push(property);
+  }
+  return arrayOfObj;
+}
+const gradeReport = { s101: 3, s102: 2, s103: 3 };
+console.log(getProperties(gradeReport));
