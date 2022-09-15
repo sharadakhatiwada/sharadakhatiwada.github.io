@@ -138,8 +138,28 @@
 //   }
 // }
 
-function getMaxSubSum(arr) {
-  let sum = 0;
-  arr.reduce((element, sum) => element + sum), 0;
+// function getMaxSubSum(arr) {
+//   let sum = 0;
+//   arr.reduce((element, sum) => element + sum), 0;
+// }
+// console.log(getMaxSubSum[(1, 2, 3)]);
+
+function camelize(str) {
+  if (str === "") {
+    return "";
+  }
+  let dashIndex;
+  while (true) {
+    dashIndex = str.indexOf("-");
+    if (dashIndex > -1) {
+      str =
+        str.slice(0, dashIndex) +
+        str.slice(dashIndex + 1, dashIndex + 2).toUpperCase() +
+        str.slice(dashIndex + 2);
+    } else {
+      break;
+    }
+  }
+  return str;
 }
-console.log(getMaxSubSum[(1, 2, 3)]);
+console.log(camelize("aLotOf"));
