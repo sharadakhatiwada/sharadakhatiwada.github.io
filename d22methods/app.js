@@ -37,3 +37,5 @@ function Calculator() {
     return this.a * this.b;
   };
 }
+
+Calculator();
