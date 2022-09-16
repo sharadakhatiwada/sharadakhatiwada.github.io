@@ -1,4 +1,5 @@
 "use strict";
+const assert = require("assert");
 // function myCallBack(func, arg) {
 //   function cube(number) {
 //     number = number * number * number;
@@ -144,22 +145,127 @@
 // }
 // console.log(getMaxSubSum[(1, 2, 3)]);
 
-function camelize(str) {
-  if (str === "") {
-    return "";
-  }
-  let dashIndex;
-  while (true) {
-    dashIndex = str.indexOf("-");
-    if (dashIndex > -1) {
-      str =
-        str.slice(0, dashIndex) +
-        str.slice(dashIndex + 1, dashIndex + 2).toUpperCase() +
-        str.slice(dashIndex + 2);
-    } else {
-      break;
-    }
-  }
-  return str;
+// function camelize(str) {
+//   if (str === "") {
+//     return "";
+//   }
+//   let dashIndex;
+//   while (true) {
+//     dashIndex = str.indexOf("-");
+//     if (dashIndex > -1) {
+//       str =
+//         str.slice(0, dashIndex) +
+//         str.slice(dashIndex + 1, dashIndex + 2).toUpperCase() +
+//         str.slice(dashIndex + 2);
+//     } else {
+//       break;
+//     }
+//   }
+//   return str;
+// }
+// console.log(camelize("aLotOf"));
+
+// function getMaxSubSum(arr) {
+//   let maxSum = 0;
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//     if (sum > maxSum) {
+//       maxSum = maxSum + sum;
+//     }
+//   }
+//   return maxSum;
+// }
+
+// function getMaxSubSum1(arr) {
+//   let maxSum = 0;
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (sum + arr[i] >= maxSum) {
+//       if (arr[i] > sum) sum = arr[i];
+//       else sum = sum + arr[i];
+//       maxSum = sum + maxSum;
+//     } else {
+//       sum = arr[i];
+//       if (sum > maxSum) maxSum = sum;
+//     }
+//   }
+
+//   return maxSum;
+// }
+
+// function maxSum(arr) {
+//   let maxSum = 0;
+//   let sum = 0;
+//   for (let num of arr) {
+//     sum = sum + num;
+//     if (sum > maxSum) {
+//       maxSum = sum;
+//     }
+//   }
+//   return maxSum;
+// }
+// console.log(maxSum([2, -8, 5, -1, 2, -3, 2]));
+
+// function getMaxSubSum(arr) {
+//   let maxSum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     let sum = 0;
+//     for (let j = i; j < arr.length; j++) {
+//       sum = sum + arr[j];
+
+//       maxSum = Math.max(maxSum, sum);
+//     }
+//   }
+//   return maxSum;
+// }
+
+// let hike = "1043huthuthut";
+// let what = parseInt(hike, 10);
+// console.log();
+
+// let lengths = ["Bilbo", "Gandalf", "Nazgul"]; //.map((item) => item.length);
+// let result = lengths.map(function (item, index, array) {
+//   // returns the new value instead of item
+// });
+// console.log(result); // 5,7,6
+// function compareNumeric(a, b) {
+//   a = "" + a;
+//   b = "" + b;
+
+//   if (a > b) return -1;
+
+//   if (a == b) return 0;
+//   if (a < b) return 1;
+// }
+// let arr = [2, 1, 15];
+// arr.sort(compareNumeric);
+// console.log(arr); // [1, 2, 15]
+
+// function checkMax(arr) {
+//   const max = arr.reduce(function (current, max) {
+//     if (current > max) return current;
+//     else return max;
+//   });
+// }
+// console.log(checkMax([1, 2, 3, 4, 5]));
+
+function filterRange(arr, a, b) {
+  let filteredArray = arr.filter((element) => element >= a && element <= b);
+  return filteredArray;
 }
-console.log(camelize("aLotOf"));
+let filtered = filterRange([5, 3, 8, 1], 1, 4);
+console.log(filterRange([5, 3, 8, 1], 1, 4));
+describe("filterRange", function () {
+  it("returns the filtered values", function () {
+    let arr = [5, 3, 8, 1];
+    let filtered = filterRange(arr, 1, 4);
+    assert.deepEqual(filtered, [3, 1]);
+  });
+
+  it("doesn't change the array", function () {
+    let arr = [5, 3, 8, 1];
+    let filtered = filterRange(arr, 1, 4);
+    assert.deepEqual(arr, [5, 3, 8, 1]);
+  });
+});
