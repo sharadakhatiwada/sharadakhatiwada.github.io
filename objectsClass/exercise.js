@@ -62,3 +62,77 @@ function multiplyNumeric(obj) {
   return obj;
 }
 console.log(multiplyNumeric(menu));
+
+// let arr1 = [1, 2];
+// let arr2 = [1, 2];
+// console.log(arr1 == arr2);
+
+// function area() {
+//   //   return this.side * this.side;
+// }
+// area();
+
+// function averageLength(input) {
+//   let words = input.split(" ");
+//   let sum = words.reduce((accum, item) => {
+//     accum = accum + item.length;
+//     return accum;
+//   }, 0);
+//   let average = sum / words.length;
+//   return average;
+// }
+// console.log(averageLength("what a great day"));
+
+// function area() {
+//   console.log(this);
+//   console.log(this.side);
+//   return this.side * this.side;
+// }
+// const square1 = {
+//   side: 5,
+//   area: area,
+// };
+// console.log(area());
+// console.log(square1.area());
+// console.log("hello hi".split(" "));
+
+// let student = { id: 123, name: "john" };
+// const { id: studentId, name: name } = student;
+// console.log(name);
+
+// console.log(studentId);
+
+// function vowelCount(input) {
+//   let letters = input.split("");
+//   let vowelCountObj = {
+//     a: 0,
+//     e: 0,
+//     i: 0,
+//     o: 0,
+//     u: 0,
+//   };
+//   const vowels = ["a", "e", "i", "o", "u", "I"];
+//   for (let letter of letters) {
+//     if (vowels.includes(letter)) {
+//       vowelCountObj[letter.toLowerCase()] =
+//         vowelCountObj[letter.toLowerCase()] + 1;
+//     }
+//   }
+//   return vowelCountObj;
+// }
+// console.log(vowelCount("It is a cold day in january"));
+
+function reverseAll(input) {
+  let words = input.split(" ");
+  words.reverse();
+  let reverseWord;
+  let stringWord = "";
+  //   let letter = words.split("");
+  for (let i = 0; i < words.length; i++) {
+    reverseWord = words[i].split("");
+    reverseWord.reverse();
+    stringWord = stringWord + " " + reverseWord.join("");
+  }
+  return stringWord;
+}
+console.log(reverseAll("Hi how are you"));
