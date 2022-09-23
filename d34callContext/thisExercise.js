@@ -1,7 +1,5 @@
-// Fix the code below using an arrow function and then using bind
 "use strict";
 /* eslint-disable */
-
 let group = {
   title: "Our Group",
   students: ["John", "Pete", "Alice"],
