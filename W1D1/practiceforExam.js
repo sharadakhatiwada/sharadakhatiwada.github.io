@@ -28,10 +28,17 @@
 // if ("false") console.log(0);
 // else console.log(1);
 
-function a() {
-  return b;
+// function a() {
+//   return b;
+// }
+// function b() {
+//   console.log("b");
+// }
+// console.log(a()());
+
+function Square(side) {
+  this.side = side;
+  function area() {
+    return this.side * this.side;
+  }
 }
-function b() {
-  console.log("b");
-}
-console.log(a()());
