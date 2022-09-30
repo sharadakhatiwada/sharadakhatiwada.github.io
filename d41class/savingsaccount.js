@@ -8,16 +8,12 @@
 
 class SavingsAccount extends Account {
   constructor(number, interest) {
-    // this.number = number;
     super(number);
-    this._type = "savings";
     this.interest = interest;
-    super(interest);
-
     this.balance = 0.0;
   }
   getNumber() {
-    return this.number;
+    return this._number;
   }
   getInterest() {
     return this.interest;

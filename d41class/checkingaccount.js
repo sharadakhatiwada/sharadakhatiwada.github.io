@@ -9,7 +9,6 @@
 class CheckingAccount extends Account {
   constructor(number, overdraft) {
     super(number);
-    this._type = "checking";
     this._overdraft = overdraft;
   }
   getNumber() {
@@ -22,11 +21,8 @@ class CheckingAccount extends Account {
     return this._overdraft;
   }
   withdraw(amount) {
-    if (amount > this._overdraft) {
-      throw Error("Insufficient funds cannot withdraw beyond overdraft limit");
-    }
     if (amount > this._balance + this._overdraft) {
-      throw Error("Insufficient funds");
+      throw Error("Insufficient funds, cannot withdraw beyond overdraft limit");
     }
     this._balance -= amount;
   }
